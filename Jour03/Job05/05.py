@@ -1,24 +1,18 @@
+a = int(input("Veuillez entrer un chiffre : "))
+b = input("Veuillez entrer l'opération que vous souhaitez réaliser (+, -, *, /) : ")
+c = int(input("Veuillez entrer un autre chiffre : "))
 
-def calcule(num1, operator, num2):      
+def calcule():
+    if b == "+":
+        print(a + c)
+    elif b == "-":
+        print(a - c)
+    elif b == "*":
+        print(a * c)
+    elif b == "/":
+        if c != 0:  
+            print(a / c)
+        else:
+            print("Erreur : Division par zéro.")
 
-    num1=int(num1)                      
-    operator=str(operator)              
-    num2=int(num2)                    
-
-    if operator == '+' :           
-        resultat=num1+num2            
-    elif operator == '-':
-        resultat=num1-num2
-    elif operator == '*':
-        resultat=num1*num2
-    elif operator == '%':
-         resultat=num1%num2
-    elif operator == '/':
-          if num2 != 0:                 
-            resultat=num1/num2
-          else:                       
-            resultat="Cela ne se fait pas de diviser par zéro"  
-    else :
-        resultat="Désolé, il est impossible de calculer ça"    
-
-    return resultat                  
+calcule()
